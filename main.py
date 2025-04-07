@@ -19,7 +19,9 @@ async def read_root():
 async def send_email(
     name: str = Form(...),
     email: str = Form(...),
-    message: str = Form(...)
+    phone: str = Form(...),
+    message: str = Form(...),
+    attachment: UploadFile = File(None)  # يقبل الملف كاختياري
 ):
     msg = EmailMessage()
     msg['Subject'] = f'HR Hub Contact - رسالة من {name}'
