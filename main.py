@@ -12,7 +12,7 @@ app = FastAPI()
 # حل لمشكلة CORS لو أرسلت من موقع آخر
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://hrhub-sa.github.io"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
